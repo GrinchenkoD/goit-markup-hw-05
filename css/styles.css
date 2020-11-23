@@ -63,6 +63,19 @@ body {
         padding-top: 94px;
         padding-bottom: 94px;
 }
+.section-title{
+        color: var(--title-text-color);
+
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+
+        margin-top: 0px;
+        margin-bottom: 50px;
+        
+}
+
 
 /*  =================Хедер===================== */
 .logo{
@@ -122,11 +135,6 @@ body {
         color: var(--primary-text-color);
 }
 
-
-.link:hover,
-.link:focus {
-        color: var(--accent-color);
-}
 .site-nav li+li {
         margin-left: 50px;
 } 
@@ -136,7 +144,17 @@ body {
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
+
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+.link:hover,
+.link:focus {
+        color: var(--accent-color);
+}
+
+
 .site-nav .link.current{
         color: var(--accent-color);
         justify-content: top;
@@ -154,9 +172,6 @@ body {
         margin-top: 28px;
         pointer-events: none;
 }
-.header-adress {
-        display: block;
-}
 
 /* /* .contacts-item {
         margin-top: 32px;
@@ -164,7 +179,31 @@ body {
 .contacts li+li {
         margin-left: 50px;
 }
+.header-contacts-icon {
+        margin-right: 10px;
+}
+     
+.header-adress {
+        display: flex;
+        align-items: center;
 
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-adress:hover .header-contacts-icon,
+.header-adress:focus .header-contacts-icon {
+        --color3: #2196f3;
+}
+.mail-icon {
+        width: 16px;
+        height: 12px;
+}
+     .tel-icon{
+       width: 10px;
+       height: 16px;
+}
+    
+      
 /* =========================Герой =================*/
 .hero {
         background-color: var(--footer-bg-color);
@@ -218,23 +257,11 @@ body {
 .employees{
         list-style: none;
 } */
+
+/* =================Преимущества =================*/
 .features.section{
         padding-bottom: 0px;
 }
-.section-title{
-        color: var(--title-text-color);
-
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
-
-        margin-top: 0px;
-        margin-bottom: 50px;
-        
-}
-
-/* =================Преимущества =================*/
 
 .features .section-title{
         margin: 0;
@@ -268,6 +295,36 @@ body {
 .features-list li{
         max-width: 270px;
 }
+.features-item::before{
+        content: "";
+        display: block;
+      
+        width: 270px;
+        height: 120px;
+        
+        margin-bottom: 30px;
+        background-size: 70px 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f5f4fa;
+        border-radius: 4px;
+         
+}
+.antenna::before{
+        background-image: url(../images/icons/antenna.svg);
+}
+      
+.astronaut::before{
+        background-image: url(../images/icons/astronaut.svg);
+}
+.clock::before{
+        background-image: url(../images/icons/clock.svg);
+}
+.diagram::before{
+        background-image: url(../images/icons/diagram.svg);
+}
+      
+      
 /* ====================чем мы занимаемся=============== */
 
 .activities {
@@ -277,7 +334,33 @@ body {
         display: flex;
 }
 .activities-list li+li {
-margin-left: 30px;
+        margin-left: 30px;
+}
+.activities-link {
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        
+        
+}
+.activities-discription {
+        position: absolute;
+        bottom: 0px;
+
+        width: 100%;
+                
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        text-align: center;
+        background-color: rgba(47, 48, 57, 0.8);
+        text-transform: uppercase;
+        color: var(--accent-white-color);
+        
+        padding-top: 27px;
+        padding-bottom: 27px;
+        
+        
 }
 
 /* ========================Команда==================== */
@@ -326,6 +409,88 @@ padding-bottom: 94px;
 .employees.list>li+li{
         margin-left: 30px;
 }
+.socials{
+        display: flex;
+        justify-content: center;
+      }
+.social-item:not(:last-child) {
+        margin-right: 10px;
+}
+
+.social-link {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        background-size: cover;
+        background-color: var(--primary-bg-color)
+
+}
+.social-icon {
+        width: 20px;
+        height: 20px;
+        /* fill: #afb1b8; */
+}
+.social-link:hover,
+.social-link:focus {
+        background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+        --color4: #ffffff;
+}
+
+
+
+/* ===============================Клиенты===================== */
+
+
+.clients-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.clients-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+.clients-iteam:not(:last-child){
+        margin-right: 30px;
+}
+
+
+.clients-link{
+        display: flex;
+        width: 170px;
+        height: 90px;
+
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        border-color: #AFB1B8;
+        border-radius: 4px;
+        fill: #AFB1B8; 
+}
+.clients-link:hover,
+.clients-link:focus {
+        border-color: var(--accent-color);
+}
+/* .clients-icon{
+        display: block;
+        } */
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+        --color4: #2196f3;
+        box-shadow:  drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.25));
+        }
+
 
 /* =======================футер======================= */
 .footer .container {
@@ -417,6 +582,9 @@ letter-spacing: 0.03em;
         line-height: 1.6;
 
         padding: 6px 22px;
+
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter .button:hover, 
@@ -469,6 +637,9 @@ max-width: 370px;
 
 display: flex;
 justify-content: center;
+
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .projects-item:hover,
