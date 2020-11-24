@@ -600,12 +600,12 @@ letter-spacing: 0.03em;
 
 .backdrop {
         position: fixed;
-        top: 0;
-        left: 0;
+        left: 0px;
+        top: 0px;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        transition: all 250ms linear;
+        background: rgba(0, 0, 0, 0.2);
+        transition: 250ms linear;
       }
       
       .modal {
